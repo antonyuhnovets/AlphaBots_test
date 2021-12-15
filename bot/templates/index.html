@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        {% block title %}<title>Ref num</title>{% endblock %}
+    </head>
+
+    <body>
+        <div class="col-sm-10 ">
+            <tr>
+                <td>{% block content %}{% endblock %}</td>
+            </tr>
+        </div>
+        <div class="container-fluid">
+            <form method="post" action="{% url 'refer_link' %}">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td><h2>Введите реферальный код</h2></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="refer" name="text" value= "" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

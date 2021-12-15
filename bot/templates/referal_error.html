@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<h2>Ошибка! Неверный код</h2>
+<h1>
+    {% for x in refers %}
+    {{ x }}
+    {% endfor %}
+</h1>
+
+{% endblock %}
